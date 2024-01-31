@@ -16,5 +16,5 @@ COPY cloud_start.sh /app/
 
 RUN chmod +x /app/cloud_start.sh
 
-EXPOSE 8000
+EXPOSE 8003
 ENTRYPOINT ["/app/cloud_start.sh"]
