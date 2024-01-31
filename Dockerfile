@@ -11,5 +11,5 @@ RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/
 WORKDIR /app
 COPY --from=BUILD /app/out/bin/zep /app/
 
-EXPOSE 8000
+EXPOSE 8003
 ENTRYPOINT ["/app/zep", "--config", "/app/config.yaml"]
