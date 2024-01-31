@@ -19,7 +19,7 @@ llm:
   openai_endpoint:
   openai_org_id:
 nlp:
-  server_url: "http://zep-nlp.limemarketing.online"
+  server_url: "http://localhost:5557"
 memory:
   message_window: 12
 extractors:
@@ -56,7 +56,7 @@ store:
     dsn: "postgres://postgres:postgres@localhost:5432/?sslmode=disable"
 server:
   # Specify the host to listen on. Defaults to 0.0.0.0
-  host: http://zep-memory.limemarketing.online
+  host: 0.0.0.0
   port: 8003
   # Is the Web UI enabled?
   # Warning: The Web UI is not secured by authentication and should not be enabled if
