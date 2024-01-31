@@ -19,7 +19,7 @@ llm:
   openai_endpoint:
   openai_org_id:
 nlp:
-  server_url: "http://localhost:5557"
+  server_url: "http://zep-nlp.limemarketing.online"
 memory:
   message_window: 12
 extractors:
@@ -56,8 +56,8 @@ store:
     dsn: "postgres://postgres:postgres@localhost:5432/?sslmode=disable"
 server:
   # Specify the host to listen on. Defaults to 0.0.0.0
-  host: 0.0.0.0
-  port: 8000
+  host: http://zep-memory.limemarketing.online
+  port: 8003
   # Is the Web UI enabled?
   # Warning: The Web UI is not secured by authentication and should not be enabled if
   # Zep is exposed to the public internet.
@@ -73,7 +73,7 @@ auth:
 data:
   #  PurgeEvery is the period between hard deletes, in minutes.
   #  If set to 0 or undefined, hard deletes will not be performed.
-  purge_every: 60
+  purge_every: 120
 log:
   level: "info"
 opentelemetry:
