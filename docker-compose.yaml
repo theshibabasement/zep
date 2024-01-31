@@ -44,7 +44,7 @@ services:
         nlp:
           condition: service_healthy
     ports:
-        - "8003:8000"
+        - "8003:8003"
     volumes:
       - ./config.yaml:/app/config.yaml
     environment:
@@ -62,7 +62,7 @@ services:
       context: .
       dockerfile: Dockerfile
     healthcheck:
-      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/8000' || exit 1
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/8003' || exit 1
       interval: 5s
       timeout: 10s
       retries: 3
